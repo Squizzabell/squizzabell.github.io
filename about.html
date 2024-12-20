@@ -1,119 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizards</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Title Section -->
-    <header>
-        <h1>
-            <img src="data:image/png;base64,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" alt="Lizard" style="width: 30px; height: 30px;">
-            Lizards
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAZlBMVEX///8AAAD7+/vr6+vx8fH29vbj4+NJSUmoqKg2Njbn5+fa2tru7u7ExMRCQkJaWlolJSWdnZ1hYWFQUFC+vr6MjIxsbGwxMTHMzMx6enoLCwuxsbHU1NSBgYGTk5NnZ2cdHR0XFxfqHigaAAAJmElEQVR4nO1c6dqqvA5VEGSSURnF4f5v8sOBNC1NLdCt5zzPu37tLVDSNFkZWt7N5g9/+MO/g7WLHOvXQmCEXu+32+22TS71r2V5wfGSdAtoi/8BsdxLuxXQRL8VyckqUaQBhf1LmQ6xRKQB/u90ZfVykQaUv/JDd0/KtN16v5HpILMmQPUTs+pEMdKyKdB/Lz+QKeMlKjLXeZB6w2TcfV0mjxNpf4QLJ/jx8G2ZOD35HnY1f/w5/7JMByxTHnDXwNZ856sy1Xcm0l30/Wjk0/a764e5YBp9y/GScaqKujzxCKphHrb1g+llWL+TaZn21Cs5g0plYrvj1avZUOMkb/aRcc1dLdNmA0RhVqjzOO55eg0xlOQqFio15X5h78eZU4/jdo4X+z1+ecSi8JEYA9IZQ5xeP/PaPWgjK0TnPoJMJTVIblaoaJLZvuHCLUDYN/KViVmhjnKREOW405/+tVAXSqhmvAOCntQx/4lQnlykwbbeN1hA14p0CVzBjFA2JVT4viGAAk+RWI63mKIEQlWjojbh+MtNMQissCnylErFlgo8oaGHCMZ7zIWZTCUTu9rRIwDzGgzIE6nw2FDoUWy+QS5sMnURpMrwNXA+Iuw9kGsIvlIqfg3ghSHx7ODBY+hL6XuWAFl7xl+B/I7WVD2Gqthw5Q51kuhkcIHOv8GkyIC9EOBAoq161AUGoFejJoWFEoMJpMJX6lGWLJvuBkHmKRaUwOhb4kkH2gnGm0Hu/T3yXbjA8k5icZjnUvTqhOEyHbJ3i3EX2FMeZ2DdtxWRItRDYhMvolWWoYjzheC3l023voFQRIx5P98sWVtYhauQfoAdy5I81LIiGkHWyKyKgE4CLF2kbpLBsHq3E9IdARnEIl3BOuy5n21oI4iGHnCpdEIMy7x3ia6I3hdjIX5Z68bHMpGh0UH3zNeVC8UWF1ehzsTkGZy2AujIiJvc83XFWisF+5GZGlo9d9LgpzPAHdfmblx7Xm2BaogEngRJY8ZfVrLl0ZIbRrtmH6f41iou8iar9dcRKXqUilWiiIXcLY+YXDv3tiWQd5pd9x1aFf/1IkjxcLAVElWFoVwpmR5vOOktZI2eqWruBxynub0QX5EmY8+T4aIVEjkddBuHvR69OkRrkihbr8H2A2Kt3UtukypjMuKcEtK+tgzVFbH1SahBWTomX8qfZY2hjQX50+e9GHojjk1Xp9KXjoNtmcWNz/6zy2Wj8djr2PuErAejxz1jYK49OQSD4xV7jqfi2E+F0QsdXU120Di+ZgFaM2/bFfxITng88WEz15HqIFBegS+CmVcu9TwPbKXjPJwjFxS0QqLLzaTC8dmBS2R1wyMiNN7hVSRyMR7nO3qCoyLWI9U8IIHyKX69d5juFS0deDNuGXOObwGd6pj5AzYh0zAWdqlPXQgbbQ+JxRxzAo25vZAQMm04R/eVUtknrrOecDI5YAixdloUtpRMXI4f0yO4grcKHMLizoyd9ajZ73N52HaQE+bSgLMLj2JGKdwYgqLSWdn2jswGXOSDpdedA7wA9sHrxXxy4A+B1Zi/GOgjRmHXiOT+wL2K90USE+lhS3aF1remrWNfyN+qxk0kIpTbrmtEOYdG8V4VelEZDjM4TTIn4E3tRA+SlJCRyn1Fv3Un6drrIZEsD6rRV1h5pzrrpNTSQUKMaMM9WWzl9SLjHt54kWYkuOWjmbJMYGXULqwSRUdUArj2osthNaSn1PZlnx3r0B1wPnpZ35SFn97u7T1N/aLsLx1tvkIuqqj0aBwmRHkruzASTcHa2cFDxCCwd0ozETff4gXn3ESnu/WrDus4U6bTSvU5CNVI2kmPr2gjlHkMnVTLVc5Xk3G3LkpZBNcRneC6T0pv+kZe19nK3e8z5zG3O/u3NPF8zWBS83L1bbly+y3kZ1iF6GRFKyH9UasX+c8vNa2SyArLOx7tebYUjz+hK7jYcj/j03yTzGMWnE7sd12f2SPWnTBpJDA2Gtz2S5YGgwHRuZwwXf+6ZOGORY7fgZWIZ4esUquVIYNz9hrJCWFQe8QVFixQYpl6uazXaabu2OGxT2Lfr/y4PHnHgcmjnfP+bsJydlHgDklznMqCZomoLuREbvMuiBxepgS9HC3efsK4YZZPViTdJ3nZ9KfTEAavSUyG8JR3/1q8Hl8bzk3zy2WMjqi5HQscbnvKI9tqpL04w5rsQzO8nQBxCB/F5d8k6KKRcJ2OVK9wywyQ07Y1bYHpo2rkPhx8Tv2fm1qMoridaZ2mI4U2I2nFkfQgBWzwlneLDeqooWg54kZNvmfVZsKAdINdAgeeg+IpJU6Hj3mcdfSVI2xQlY+3vCXHtW6p76d3eqw2zvtOl3jDniyY4gdXcRISekr74zkccvQwrA/dqSxEYip673AOZuVf9jkTwvZ7qIeigQ9axqb8Cc4iky6IgyQvZDfowIrOOD0dXRYYleWpAbbxil4SVPmuOLwWYC58cRRriEHqZeP+l/JtKH9eUY/byLyq5y/uKCc7Lo75Sd24sdEkVxzrwbp6BibYfYY+MnK89FPtyPauV7QJBqliXigIJSNJhXf2os+JOprBmrYh7FO8PAbKhbHqZAt818mKUeaxpiIb7fjMD/p2RhSEtXrwbMNlXbUR5AP3pW81gPO94h47g8xlpgqEQKRL+gR4oA5aBONE387Hir9Et+hn6ayxw35wzvJJkWzaW/02AiygYjtimVCvGoYpaoaBsKBk6iO9MaI8NcU22Kb1Aw34yMvY+o1k+vzslvn3rI4bxEBN3/iIkZYehs72BaizX3JAmmjqtCamBJjxfV5rEk5brCQFAJh2iLYJ5+5VjBpe3JIWgA4dMy+a25xKlj5IANLHng2tu/EMaAwLBXTpu8uPYYMNLGqTTwFJXgVFovyTRhUgAzWkKWtaB89nm3FiN0OGLjlfNH+6y3VMYFIK+3NH2MHCa53R0YIo1NxcDTXMl5yGlkNoN8zc/opwJ047B/sIoQulf+jjAeHPaqzrvyPwJ55mLYE7aeqYcj9hn2gGc0o6Osa+6jhzw+pXutIPWY19fIY7DJX2VB3pX2m5mfoTH9jU9em8lnfPTX1Uhdss2qfAyAakqUQddQT094wDosdu6jNZC8af8+0f1XvWV7YaYFXxnGk+yXw/sXdTDAq7M/PMNMxOh+mXFMZYYSxD56ctweiE1SidqfxlYMKHWVULPMces+j+fRbQ5Le7QZctOhsBBy4Pm/B6+/CRwNfwzvKfbWTru3/HRoFw0FVlLGkxBuf7f6jpD3/4v8d/YJJq3AraYnMAAAAASUVORK5CYII=" alt="Lizard" style="width: 30px; height: 30px;">
-        </h1>
-    </header>
-
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="index.html">Big Lizards</a></li>
-            <li><a href="about.html">Small Lizards</a></li>
-            <li><a href="lizards.html">My Lizards</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-<div style="display: flex; align-items: flex-start; justify-content: space-between; width: 100%;">
-  <p style="max-width: 45%;">Brookesia nana, also known as the nano-chameleon, is a tiny species 
-      of chameleon native to the rainforests of Madagascar. It is considered one of the
-      smallest reptiles in the world, with adult males measuring just around 1 inch (2.5 cm) 
-      in length, making it an incredibly fascinating creature. Discovered in 2012, this
-      chameleon lives in the leaf litter of Madagascar's dense forests, where it relies on
-      its camouflage to evade predators. Brookesia nana has a distinct, compact body and is 
-      known for its slow, deliberate movements. Like other chameleons, it has a
-      prehensile tail and independently movable eyes, which allow it to detect prey such
-      as small insects. Despite its diminutive size, it plays an important role in the 
-      local ecosystem by controlling insect populations. Due to its small size and specialized
-      habitat, Brookesia nana is highly vulnerable to habitat loss and environmental changes.</p>
-  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTZh8khVMCGS7Y-p-cLT7vB2rD8TVKaxNqitVtEga5s0JJz-cQCiUm6eTmicmq3zegEjkYWsR-92bI27oJ5kMHgTA" alt="Lizard" style="width: 370px; height: 370px;">
-  <p style="max-width: 45%;">Brookesia nana, also known as the nano-chameleon, is one of the
-      smallest reptiles on Earth, measuring just around 1 inch (2.5 cm) in length when fully
-      grown. Native to the island of Madagascar, this incredibly tiny chameleon was first 
-      discovered in 2012 in the humid rainforests of the northern part of the island. Brookesia
-      nana has a relatively simple appearance, with a short, stubby body and a tail that helps
-      it balance in the dense underbrush. Unlike many other chameleons, it doesn’t display
-      vibrant color changes but rather relies on its natural brown or gray hues to blend into 
-      its forest floor habitat. Due to its minuscule size, it feeds on tiny insects, often 
-      using its long, sticky tongue to catch prey. This species is primarily arboreal and spends 
-      most of its life hidden among leaves and debris, making it difficult to spot. Because
-      of its limited range and the destruction of its rainforest habitat, Brookesia nana is 
-      considered a vulnerable species.</p>
-</div>
-    <div style="display: flex; align-items: flex-start; justify-content: space-between; width: 100%;">
-  <p style="max-width: 45%;">The brown anole (Anolis sagrei) is a small, adaptable lizard
-      native to the Caribbean but has become widespread in the southeastern United States.
-      Typically measuring between 5 to 8 inches in length, these lizards have a slender
-      , elongated body with a brown or grayish coloration, often with darker patterns
-      running along their backs. Brown anoles are known for their remarkable ability to
-      adapt to a variety of habitats, including urban areas, forests, and grasslands. Males
-      display a bright orange or red throat flap, or "dewlap," which they use for 
-      communication and to attract mates. Highly territorial, brown anoles often perch on 
-      fences, trees, or rocks, where they hunt insects like ants, spiders, and small bugs. 
-      Though small in size, these lizards are agile and quick, able to dart across 
-      surfaces and escape predators. Their introduction to non-native areas, including 
-      Florida, has raised concerns about their impact on local ecosystems, as they often 
-      outcompete native anole species for food and territory.</p>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Brown_Anole_%28Anolis_sagrei%29.jpg" alt="Lizard" style="width: 370px; height: 370px;">
-  <p style="max-width: 45%;">The brown anole (Anolis sagrei) is a small but resilient
-      lizard that has become a common sight in many areas outside its native range, 
-      particularly in the southeastern United States. Originally from the Caribbean,
-      it was introduced to Florida in the 19th century and has since spread 
-      across various environments. Brown anoles are diurnal and highly active, 
-      spending much of their time basking in the sun to regulate their body temperature.
-      Unlike many other lizard species, they have adapted to living in both natural
-      and urban habitats, from dense forests to suburban gardens. These lizards are 
-      highly territorial, with males often engaging in displays of dominance, including
-      extending their colorful dewlap. Their ability to thrive in different
-      environments is partly due to their varied diet, which includes insects,
-      small arthropods, and even plant material. Brown anoles are also known for
-      their impressive speed and agility, often darting quickly to escape 
-      predators. However, they can be considered invasive in areas outside 
-      their native range, where they compete with native species for food and territory..</p>
-</div>
-    <div style="display: flex; align-items: flex-start; justify-content: space-between; width: 100%;">
-  <p style="max-width: 45%;">The Mediterranean house gecko (Hemidactylus turcicus) is a small,
-      nocturnal lizard native to the Mediterranean region, but it has since spread to many
-      parts of the world, including the United States. Typically measuring around 4 to 6 
-      inches in length, this gecko has a pale gray or light brown body with speckled patterns,
-      which helps it blend into rocky or stucco surfaces. Mediterranean house geckos are
-      known for their ability to thrive in human-inhabited areas, such as homes, buildings,
-      and walls, where they often come out at night to hunt insects like moths, flies,
-      and other small arthropods. Their adhesive toe pads allow them to climb vertical surfaces
-      with ease, and they can even scale smooth glass. These geckos are relatively 
-      social and can often be seen in groups, especially around outdoor lights, where insects
-      are attracted. While they are harmless to humans, Mediterranean house geckos are
-      considered an invasive species in many areas, where they compete with native lizards 
-      for resources. Despite this, they play a beneficial role in controlling insect
-      populations in and around homes.</p>
-  <img src="https://www.herpingva.org/uploads/1/3/8/6/138626214/img-4382.jpg" style="width: 370px; height: 370px;">
-  <p style="max-width: 45%;">The Mediterranean house gecko (Hemidactylus turcicus) is a small,
-      adaptable lizard known for its distinctive appearance and nocturnal behavior. 
-      Native to the Mediterranean region, this gecko has spread to other parts of the world,
-      including tropical and subtropical areas, where it thrives in urban environments.
-      Typically measuring 4 to 6 inches in length, the gecko has a light-colored, speckled
-      body with translucent skin, which helps it camouflage against walls, rocks, 
-      and buildings. One of the most fascinating traits of the Mediterranean house gecko 
-      is its ability to vocalize, producing a series of chirps or clicks, especially 
-      during mating season. These geckos are primarily insectivorous, feeding on a 
-      wide variety of insects such as ants, beetles, and cockroaches, which they hunt
-      using their quick reflexes and sticky feet. Unlike many other gecko species,
-      they do not drop their tails when threatened. Mediterranean house geckos are
-      also known for their resilience, able to survive in a variety of climates
-      and urban settings, making them a common sight in homes and around outdoor 
-      lighting where insects are abundant.</p>
-</div>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <h2>Welcome to the World of Lizards!</h2>
+            <p>Here you'll find all the information you need about different species of lizards.</p>
+        </section>
+        <section id="about">
+            <h2>About Lizards</h2>
+            <p>Lizards are fascinating reptiles found all over the world. They come in many different shapes, sizes, and colors.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer educational resources and reptile care services for lizard enthusiasts.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to learn more, feel free to reach out!</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Lizards Inc. All rights reserved.</p>
+    </footer>
 </body>
+</html>
+
 </html>
 
